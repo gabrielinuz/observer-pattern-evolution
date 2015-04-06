@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1428300301 source:/home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/main.cpp
+	<iostream>
+	<chrono>
+	<thread>
+	"include/ITimer.h"
+	"include/IAscriber.h"
+	"include/INotifier.h"
+	"include/Timer.h"
+	"include/ChangeManager.h"
+	"include/AnalogClock.h"
+	"include/DigitalClock.h"
+
+1428298930 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/ITimer.h
+
+1428298958 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/IAscriber.h
+	"IObserver.h"
+
+1428298939 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/IObserver.h
+
+1428298949 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/INotifier.h
+
+1428298894 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/Timer.h
+	"ITimer.h"
+	"INotifier.h"
+
+1428298980 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/ChangeManager.h
+	"IAscriber.h"
+	"INotifier.h"
+	"IObserver.h"
+	<list>
+
+1428298989 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/AnalogClock.h
+	<iostream>
+	<string>
+	"IWidget.h"
+	"ITimer.h"
+	"IObserver.h"
+	"IAscriber.h"
+
+1428298907 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/IWidget.h
+
+1428298967 /home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/include/DigitalClock.h
+	<iostream>
+	<string>
+	"IWidget.h"
+	"ITimer.h"
+	"IObserver.h"
+	"IAscriber.h"
+
+1428298616 source:/home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/src/AnalogClock.cpp
+	"../include/AnalogClock.h"
+
+1428298622 source:/home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/src/ChangeManager.cpp
+	"../include/ChangeManager.h"
+
+1428298629 source:/home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/src/DigitalClock.cpp
+	"../include/DigitalClock.h"
+
+1428298636 source:/home/gabriel/develop/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-02/src/Timer.cpp
+	"../include/Timer.h"
+
