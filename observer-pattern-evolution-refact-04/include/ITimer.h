@@ -1,7 +1,7 @@
 /**
     File        : ITimer.h
 
-    Project     : observer-pattern-evolution-refact-01
+    Project     : observer-pattern-evolution-refact-04
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
