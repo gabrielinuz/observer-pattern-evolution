@@ -13,7 +13,6 @@
     @license       http://www.opensource.org/licenses/mit-license.php
 **/
 
-
 #include "../include/AnalogClock.h"
 
 AnalogClock::AnalogClock(ITimer* timer, IAscriber* ascriber)

@@ -18,13 +18,16 @@
 
 #include "ITimer.h"
 #include "INotifier.h"
+#include <chrono>
+#include <thread>
+
+using namespace std;
 
 class Timer : public ITimer
 {
     public:
-        static ITimer* initWith(INotifier* notifier);
-        static ITimer* initWith(int hours, int minutes,
-                                    int seconds, INotifier* notifier);
+        Timer(INotifier* notifier);
+        Timer(int hours, int minutes, int seconds, INotifier* notifier);
         virtual ~Timer();
 
         void setHours(int hours);
@@ -33,17 +36,13 @@ class Timer : public ITimer
         int getMinutes();
         void setSeconds(int seconds);
         int getSeconds();
-        void tick();
-
-    protected:
-        Timer(INotifier* notifier);
-        Timer(int hours, int minutes, int seconds, INotifier* notifier);
 
     private:
-        static Timer* m_instance;
         int m_hours;
         int m_minutes;
         int m_seconds;
+        void m_tick();
+
         INotifier* m_notifier;
 
 };

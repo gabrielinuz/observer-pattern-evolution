@@ -13,29 +13,7 @@
     @license       http://www.opensource.org/licenses/mit-license.php
 **/
 
-
 #include "../include/Timer.h"
-
-Timer* Timer::m_instance = 0;
-
-ITimer* Timer::initWith(INotifier* notifier)
-{
-    if(m_instance == 0)
-    {
-        m_instance = new Timer(notifier);
-    }
-    return m_instance;
-}
-
-ITimer* Timer::initWith(int hours, int minutes,
-                            int seconds, INotifier* notifier)
-{
-    if(m_instance == 0)
-    {
-        m_instance = new Timer(hours, minutes, seconds, notifier);
-    }
-    return m_instance;
-}
 
 Timer::Timer(INotifier* notifier)
 {
@@ -53,7 +31,7 @@ Timer::Timer(int hours, int minutes, int seconds, INotifier* notifier)
     m_notifier = notifier;
 }
 
-Timer::~Timer(){}
+Timer::~Timer(){m_tick();}
 
 void Timer::setHours(int hours)
 {
@@ -85,29 +63,31 @@ int Timer::getSeconds()
     return m_seconds;
 }
 
-void Timer::tick()
+void Timer::m_tick()
 {
-
-    m_seconds++;
-    if(m_seconds == 60)
+    while(1)
     {
-        m_seconds = 0;
-        m_minutes++;
-        if(m_minutes == 60)
+        m_seconds++;
+        if(m_seconds == 60)
         {
             m_seconds = 0;
-            m_minutes = 0;
-            m_hours++;
-            if(m_hours == 24)
+            m_minutes++;
+            if(m_minutes == 60)
             {
                 m_seconds = 0;
                 m_minutes = 0;
-                m_hours = 0;
+                m_hours++;
+                if(m_hours == 24)
+                {
+                    m_seconds = 0;
+                    m_minutes = 0;
+                    m_hours = 0;
+                }
             }
         }
 
+        m_notifier->notify();
+        this_thread::sleep_for (chrono::seconds(1));
     }
-
-    m_notifier->notify();
 }
 

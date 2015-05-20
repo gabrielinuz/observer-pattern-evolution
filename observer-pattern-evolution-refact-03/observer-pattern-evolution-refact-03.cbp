@@ -42,15 +42,11 @@
 		<Unit filename="include/ITimer.h" />
 		<Unit filename="include/IWidget.h" />
 		<Unit filename="include/Timer.h" />
-		<Unit filename="include/TimerFactory.h" />
-		<Unit filename="include/WidgetFactory.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AnalogClock.cpp" />
 		<Unit filename="src/ChangeManager.cpp" />
 		<Unit filename="src/DigitalClock.cpp" />
 		<Unit filename="src/Timer.cpp" />
-		<Unit filename="src/TimerFactory.cpp" />
-		<Unit filename="src/WidgetFactory.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

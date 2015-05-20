@@ -13,30 +13,35 @@
     @license       http://www.opensource.org/licenses/mit-license.php
 **/
 
-
 #include <iostream>
-#include <chrono>
-#include <thread>
 
-#include "include/TimerFactory.h"
-#include "include/WidgetFactory.h"
 #include "include/ITimer.h"
+#include "include/IAscriber.h"
+#include "include/INotifier.h"
 #include "include/IWidget.h"
+
+#include "include/Timer.h"
+#include "include/ChangeManager.h"
+#include "include/AnalogClock.h"
+#include "include/DigitalClock.h"
 
 using namespace std;
 
 int main()
 {
-    ITimer* timer = TimerFactory::create("cpp-timer");
+    INotifier* notifier = ChangeManager::getInstance();
+    //MODEL
+    ITimer* timer = new Timer(notifier);
 
-    WidgetFactory::create("analog-clock");
-    WidgetFactory::create("digital-clock");
+    IAscriber* ascriber = ChangeManager::getInstance();
+    //VIEW
+    IWidget* analogClock = new AnalogClock(timer, ascriber);
+    IWidget* digitalClock = new DigitalClock(timer, ascriber);
 
-    while(1)
-    {
-        timer->tick();
-        this_thread::sleep_for (chrono::seconds(1));
-    }
+    //CLEAN
+    delete timer;
+    delete analogClock;
+    delete digitalClock;
 
     return 0;
 }

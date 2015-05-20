@@ -1,7 +1,7 @@
 /**
     File        : ITimer.h
 
-    Project     : observer-pattern-evolution-refact-01
+    Project     : observer-pattern-evolution-refact-03
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
@@ -28,9 +28,6 @@ class ITimer
         virtual int getHours() = 0;
         virtual int getMinutes() = 0;
         virtual int getSeconds() = 0;
-
-        virtual void tick() = 0;
-
 };
 
 #endif // ITIMER_H

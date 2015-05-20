@@ -13,7 +13,6 @@
     @license       http://www.opensource.org/licenses/mit-license.php
 **/
 
-
 #include "../include/ChangeManager.h"
 
 ChangeManager* ChangeManager::m_instance = 0;
