@@ -19,28 +19,28 @@
 	<File name="include/IObserver.h" open="0" top="0" tabpos="0">
 		<Cursor position="494" topLine="0" />
 	</File>
-	<File name="include/ITimer.h" open="0" top="0" tabpos="0">
-		<Cursor position="491" topLine="0" />
+	<File name="include/ITimer.h" open="1" top="1" tabpos="4">
+		<Cursor position="848" topLine="9" />
 	</File>
 	<File name="include/IWidget.h" open="0" top="0" tabpos="0">
 		<Cursor position="492" topLine="0" />
 	</File>
-	<File name="include/Timer.h" open="0" top="0" tabpos="0">
-		<Cursor position="346" topLine="6" />
+	<File name="include/Timer.h" open="1" top="0" tabpos="2">
+		<Cursor position="989" topLine="24" />
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="8">
-		<Cursor position="512" topLine="19" />
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="1129" topLine="22" />
 	</File>
 	<File name="src/AnalogClock.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="95" topLine="0" />
+		<Cursor position="95" topLine="25" />
 	</File>
 	<File name="src/ChangeManager.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="499" topLine="0" />
+		<Cursor position="1203" topLine="33" />
 	</File>
 	<File name="src/DigitalClock.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="498" topLine="0" />
 	</File>
-	<File name="src/Timer.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="491" topLine="0" />
+	<File name="src/Timer.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1158" topLine="60" />
 	</File>
 </CodeBlocks_layout_file>
