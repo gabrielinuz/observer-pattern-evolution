@@ -33,7 +33,7 @@ int main()
     //MODEL
     ITimer* timer = new Timer(notifier);
 
-    timer->setSeconds(65);
+    timer->setSeconds(56);
     timer->setMinutes(59);
     timer->setHours(23);
 

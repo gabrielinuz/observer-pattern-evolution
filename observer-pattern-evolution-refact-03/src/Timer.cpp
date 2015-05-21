@@ -44,8 +44,10 @@ Timer::~Timer()
 void Timer::setHours(int hours)
 {
     if(hours > 23)
+    {
         std::cout << "Warning: the maximum allowable is 23 hours" << endl;
         hours = 23;
+    }
     m_hours = hours;
 }
 
@@ -57,8 +59,10 @@ int Timer::getHours()
 void Timer::setMinutes(int minutes)
 {
     if(minutes > 59)
+    {
         cout << "Warning: the maximum allowable is 59 minutes" << endl;
         minutes = 59;
+    }
     m_minutes = minutes;
 }
 
@@ -70,8 +74,10 @@ int Timer::getMinutes()
 void Timer::setSeconds(int seconds)
 {
     if(seconds > 59)
+    {
         cout << "Warning: the maximum allowable is 59 seconds" << endl;
         seconds = 59;
+    }
     m_seconds = seconds;
 }
 
