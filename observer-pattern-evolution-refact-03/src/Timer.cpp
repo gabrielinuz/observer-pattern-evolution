@@ -31,10 +31,21 @@ Timer::Timer(int hours, int minutes, int seconds, INotifier* notifier)
     m_notifier = notifier;
 }
 
-Timer::~Timer(){m_tick();}
+Timer::~Timer()
+{
+    do
+    {
+        m_tick();
+        this_thread::sleep_for (chrono::seconds(1));
+    }
+    while(m_startState);
+}
 
 void Timer::setHours(int hours)
 {
+    if(hours > 23)
+        std::cout << "Warning: the maximum allowable is 23 hours" << endl;
+        hours = 23;
     m_hours = hours;
 }
 
@@ -45,6 +56,9 @@ int Timer::getHours()
 
 void Timer::setMinutes(int minutes)
 {
+    if(minutes > 59)
+        cout << "Warning: the maximum allowable is 59 minutes" << endl;
+        minutes = 59;
     m_minutes = minutes;
 }
 
@@ -55,6 +69,9 @@ int Timer::getMinutes()
 
 void Timer::setSeconds(int seconds)
 {
+    if(seconds > 59)
+        cout << "Warning: the maximum allowable is 59 seconds" << endl;
+        seconds = 59;
     m_seconds = seconds;
 }
 
@@ -63,31 +80,35 @@ int Timer::getSeconds()
     return m_seconds;
 }
 
+void Timer::start()
+{
+    m_startState = true;
+}
+
+void Timer::stop()
+{
+    m_startState = false;
+}
+
 void Timer::m_tick()
 {
-    while(1)
+    m_seconds++;
+    if (m_seconds > 59)
     {
-        m_seconds++;
-        if(m_seconds == 60)
-        {
-            m_seconds = 0;
-            m_minutes++;
-            if(m_minutes == 60)
-            {
-                m_seconds = 0;
-                m_minutes = 0;
-                m_hours++;
-                if(m_hours == 24)
-                {
-                    m_seconds = 0;
-                    m_minutes = 0;
-                    m_hours = 0;
-                }
-            }
-        }
+        m_seconds = 0;
+        m_minutes++;
 
-        m_notifier->notify();
-        this_thread::sleep_for (chrono::seconds(1));
+        if (m_minutes > 59)
+        {
+              m_minutes = 0;
+              m_hours++;
+
+              if (m_hours > 23)
+              {
+                    m_hours = 0;
+              }
+        }
     }
+    m_notifier->notify();
 }
 

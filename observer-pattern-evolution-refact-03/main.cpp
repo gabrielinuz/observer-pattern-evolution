@@ -33,6 +33,12 @@ int main()
     //MODEL
     ITimer* timer = new Timer(notifier);
 
+    timer->setSeconds(65);
+    timer->setMinutes(59);
+    timer->setHours(23);
+
+    timer->start();
+
     IAscriber* ascriber = ChangeManager::getInstance();
     //VIEW
     IWidget* analogClock = new AnalogClock(timer, ascriber);

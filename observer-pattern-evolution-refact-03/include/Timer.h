@@ -16,6 +16,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
+#include <iostream>
 #include "ITimer.h"
 #include "INotifier.h"
 #include <chrono>
@@ -37,7 +38,11 @@ class Timer : public ITimer
         void setSeconds(int seconds);
         int getSeconds();
 
+        void start();
+        void stop();
+
     private:
+        bool m_startState;
         int m_hours;
         int m_minutes;
         int m_seconds;
