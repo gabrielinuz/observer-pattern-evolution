@@ -38,8 +38,10 @@ Timer::~Timer()
         m_tick();
         #ifdef __unix__
             sleep(1);
+            system("clear");
         #elif defined(_WIN32) || defined(WIN32)
             Sleep( 1000 );
+            system("cls");
         #endif // defined
     }
     while(m_startState);
