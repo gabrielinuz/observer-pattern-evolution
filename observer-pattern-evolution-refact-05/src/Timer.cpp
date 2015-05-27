@@ -1,7 +1,7 @@
 /**
     File        : Timer.cpp
 
-    Project     : observer-pattern-evolution-refact-04
+    Project     : observer-pattern-evolution-refact-05
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
