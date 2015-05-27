@@ -1,7 +1,7 @@
 /**
     File        : Timer.h
 
-    Project     : observer-pattern-evolution-refact-03
+    Project     : observer-pattern-evolution-refact-04
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
@@ -16,11 +16,15 @@
 #ifndef TIMER_H
 #define TIMER_H
 
+#ifdef __unix__
+    #include <unistd.h>
+#elif defined(_WIN32) || defined(WIN32)
+    #include <windows.h>
+#endif // defined
+
 #include <iostream>
 #include "ITimer.h"
 #include "INotifier.h"
-#include <chrono>
-#include <thread>
 
 using namespace std;
 

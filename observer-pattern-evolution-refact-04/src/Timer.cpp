@@ -1,7 +1,7 @@
 /**
     File        : Timer.cpp
 
-    Project     : observer-pattern-evolution-refact-03
+    Project     : observer-pattern-evolution-refact-04
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
@@ -36,7 +36,11 @@ Timer::~Timer()
     do
     {
         m_tick();
-        this_thread::sleep_for (chrono::seconds(1));
+        #ifdef __unix__
+            sleep(1);
+        #elif defined(_WIN32) || defined(WIN32)
+            Sleep( 1000 );
+        #endif // defined
     }
     while(m_startState);
 }

@@ -5,6 +5,10 @@
 
     Implementer : Gabriel Nicolás González Ferreira
 **/
+#include <sstream>
+#define TO_STRING( x ) dynamic_cast< std::ostringstream & >( \
+        ( std::ostringstream() << std::dec << x ) ).str()
+
 #include <iostream>
 #include <list>
 #include <string>
@@ -180,9 +184,9 @@ void DigitalClock::Update (Subject* theChangedSubject)
 void DigitalClock::Draw ()
 {
     // get the new values from the subject
-    string hours = to_string(_subject->GetHour());
-    string minutes = to_string(_subject->GetMinute());
-    string seconds = to_string(_subject->GetSecond());
+    string hours = TO_STRING(_subject->GetHour());
+    string minutes = TO_STRING(_subject->GetMinute());
+    string seconds = TO_STRING(_subject->GetSecond());
 
     // draw the digital clock
     if(hours.size() == 1){hours = "0"+hours;}
@@ -235,9 +239,9 @@ void AnalogClock::Update (Subject* theChangedSubject)
 void AnalogClock::Draw ()
 {
     // get the new values from the subject
-    string hours = to_string(_subject->GetHour());
-    string minutes = to_string(_subject->GetMinute());
-    string seconds = to_string(_subject->GetSecond());
+    string hours = TO_STRING(_subject->GetHour());
+    string minutes = TO_STRING(_subject->GetMinute());
+    string seconds = TO_STRING(_subject->GetSecond());
 
     if(hours.size() == 1){hours = "0"+hours;}
     if(minutes.size() == 1){minutes = "0"+minutes;}

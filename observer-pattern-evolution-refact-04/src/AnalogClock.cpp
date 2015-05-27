@@ -37,10 +37,6 @@ void AnalogClock::update()
 
 void AnalogClock::draw()
 {
-//    string hours = to_string(m_hours);
-//    string minutes = to_string(m_minutes);
-//    string seconds = to_string(m_seconds);
-
     string hours = TO_STRING(m_hours);
     string minutes = TO_STRING(m_minutes);
     string seconds = TO_STRING(m_seconds);
