@@ -52,15 +52,15 @@
 	"IObserver.h"
 	"IAscriber.h"
 
-1432745207 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/AnalogClock.cpp
+1432746004 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/AnalogClock.cpp
 	"../include/AnalogClock.h"
 
 1428298620 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/ChangeManager.cpp
 	"../include/ChangeManager.h"
 
-1432745195 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/DigitalClock.cpp
+1432745994 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/DigitalClock.cpp
 	"../include/DigitalClock.h"
 
-1432745215 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/Timer.cpp
+1432745912 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/Timer.cpp
 	"../include/Timer.h"
 
