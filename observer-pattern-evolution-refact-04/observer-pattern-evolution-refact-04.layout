@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="include/AnalogClock.h" open="1" top="0" tabpos="6">
+		<Cursor position="681" topLine="14" />
+	</File>
+	<File name="include/ChangeManager.h" open="0" top="0" tabpos="0">
+		<Cursor position="498" topLine="0" />
+	</File>
+	<File name="include/DigitalClock.h" open="1" top="0" tabpos="8">
+		<Cursor position="572" topLine="22" />
+	</File>
+	<File name="include/IAscriber.h" open="0" top="0" tabpos="0">
+		<Cursor position="494" topLine="0" />
+	</File>
+	<File name="include/INotifier.h" open="0" top="0" tabpos="0">
+		<Cursor position="494" topLine="0" />
+	</File>
+	<File name="include/IObserver.h" open="0" top="0" tabpos="0">
+		<Cursor position="494" topLine="0" />
+	</File>
+	<File name="include/ITimer.h" open="1" top="0" tabpos="2">
+		<Cursor position="916" topLine="11" />
+	</File>
+	<File name="include/IWidget.h" open="0" top="0" tabpos="0">
+		<Cursor position="492" topLine="0" />
+	</File>
+	<File name="include/Timer.h" open="1" top="0" tabpos="3">
+		<Cursor position="719" topLine="24" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="987" topLine="12" />
+	</File>
+	<File name="src/AnalogClock.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="967" topLine="27" />
+	</File>
+	<File name="src/ChangeManager.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1197" topLine="28" />
+	</File>
+	<File name="src/DigitalClock.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1191" topLine="27" />
+	</File>
+	<File name="src/Timer.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="2094" topLine="69" />
+	</File>
+</CodeBlocks_layout_file>
