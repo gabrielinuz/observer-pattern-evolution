@@ -1,7 +1,7 @@
 /**
     File        : Timer.cpp
 
-    Project     : observer-pattern-evolution-refact-04
+    Project     : observer-pattern-evolution-refact-02
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
@@ -31,21 +31,7 @@ Timer::Timer(int hours, int minutes, int seconds, INotifier* notifier)
     m_notifier = notifier;
 }
 
-Timer::~Timer()
-{
-    do
-    {
-        m_tick();
-        #ifdef __unix__
-            sleep(1);
-            system("clear");
-        #elif defined(_WIN32) || defined(WIN32)
-            Sleep( 1000 );
-            system("cls");
-        #endif // defined
-    }
-    while(m_startState);
-}
+Timer::~Timer(){}
 
 void Timer::setHours(int hours)
 {
@@ -92,18 +78,9 @@ int Timer::getSeconds()
     return m_seconds;
 }
 
-void Timer::start()
+void Timer::tick()
 {
-    m_startState = true;
-}
 
-void Timer::stop()
-{
-    m_startState = false;
-}
-
-void Timer::m_tick()
-{
     m_seconds++;
     if (m_seconds > 59)
     {

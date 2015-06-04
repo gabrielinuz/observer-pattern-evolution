@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1432738424 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/main.cpp
+1433256289 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/main.cpp
 	<iostream>
 	"include/ITimer.h"
 	"include/IAscriber.h"
@@ -21,7 +21,7 @@
 
 1428298860 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/include/IWidget.h
 
-1432726034 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/include/Timer.h
+1433256294 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/include/Timer.h
 	<unistd.h>
 	<windows.h>
 	<iostream>
@@ -61,6 +61,6 @@
 1432745994 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/DigitalClock.cpp
 	"../include/DigitalClock.h"
 
-1432745912 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/Timer.cpp
+1433256298 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-04/src/Timer.cpp
 	"../include/Timer.h"
 

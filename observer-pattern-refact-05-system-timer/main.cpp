@@ -1,7 +1,7 @@
 /**
     File        : main.cpp
 
-    Project     : observer-pattern-evolution-refact-02
+    Project     : observer-pattern-evolution-refact-03
 
     Copyright 2015 Gabriel Nicolás González Ferreira <gabrielinuz@gmail.com>
 
@@ -13,19 +13,12 @@
     @license       http://www.opensource.org/licenses/mit-license.php
 **/
 
-#ifdef __unix__
-    #include <unistd.h>
-#elif defined(_WIN32) || defined(WIN32)
-    #include <windows.h>
-#endif // defined
-
 #include <iostream>
-#include <chrono>
-#include <thread>
 
 #include "include/ITimer.h"
 #include "include/IAscriber.h"
 #include "include/INotifier.h"
+#include "include/IWidget.h"
 
 #include "include/Timer.h"
 #include "include/ChangeManager.h"
@@ -37,24 +30,23 @@ using namespace std;
 int main()
 {
     INotifier* notifier = ChangeManager::getInstance();
+
+    //MODEL
     ITimer* timer = new Timer(notifier);
 
+    timer->start();
+//    timer->stop();
+
     IAscriber* ascriber = ChangeManager::getInstance();
-    new AnalogClock(timer, ascriber);
-    new DigitalClock(timer, ascriber);
 
-    while(1)
-    {
-        #ifdef __unix__
-            system("clear");
-        #elif defined(_WIN32) || defined(WIN32)
-            system("cls");
-        #endif // defined
-        timer->tick();
-        this_thread::sleep_for (chrono::seconds(1));
-    }
+    //VIEW
+    IWidget* analogClock = new AnalogClock(timer, ascriber);
+    IWidget* digitalClock = new DigitalClock(timer, ascriber);
 
+    //CLEAN
     delete timer;
+    delete analogClock;
+    delete digitalClock;
 
     return 0;
 }

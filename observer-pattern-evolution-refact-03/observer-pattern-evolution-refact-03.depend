@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1428298560 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/src/AnalogClock.cpp
+1433256896 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/src/AnalogClock.cpp
 	"../include/AnalogClock.h"
 
-1428298980 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/include/AnalogClock.h
+1433256969 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/include/AnalogClock.h
 	<iostream>
 	<string>
 	"IWidget.h"
@@ -30,10 +30,10 @@
 
 1428298920 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/include/INotifier.h
 
-1428298620 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/src/DigitalClock.cpp
+1433256813 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/src/DigitalClock.cpp
 	"../include/DigitalClock.h"
 
-1428298920 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/include/DigitalClock.h
+1433256993 /home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/include/DigitalClock.h
 	<iostream>
 	<string>
 	"IWidget.h"
@@ -51,7 +51,7 @@
 	<chrono>
 	<thread>
 
-1432211780 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/main.cpp
+1433256624 source:/home/gabriel/Desarrollo/cplusplus/observer-pattern-evolution/observer-pattern-evolution-refact-03/main.cpp
 	<iostream>
 	"include/ITimer.h"
 	"include/IAscriber.h"
